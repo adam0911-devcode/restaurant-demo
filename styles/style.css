@@ -1,62 +1,97 @@
-/* Style général */
+/* Importation d'une police plus élégante */
+@import url('https://fonts.googleapis.com/css2?family=Playfair+Display:wght@700&family=Poppins:wght@300;400;600&display=swap');
+
 body {
-    font-family: Arial, sans-serif;
-    line-height: 1.6;
+    font-family: 'Poppins', sans-serif;
     margin: 0;
-    padding: 0;
-    background-color: #f4f4f4;
+    background: #fdfaf6; /* Un blanc cassé plus chaleureux */
+    color: #333;
+    line-height: 1.6;
 }
 
-/* Header avec ton image de fond */
 header {
-    background: linear-gradient(rgba(0,0,0,0.5), rgba(0,0,0,0.5)), url('../images/image.png');
-    background-size: cover;
-    background-position: center;
+    background: #2c2c2c;
     color: white;
-    text-align: center;
     padding: 60px 20px;
+    text-align: center;
+    border-bottom: 5px solid #a52a2a; /* Ligne rouge brique */
 }
 
-/* Navigation simple */
+header h1 {
+    font-family: 'Playfair Display', serif;
+    font-size: 3rem;
+    margin: 0;
+}
+
 nav {
-    background: #333;
-    color: white;
+    background: #3d3d3d;
+    padding: 15px;
     text-align: center;
-    padding: 10px;
+    position: sticky;
+    top: 0;
+    z-index: 1000;
 }
 
 nav a {
     color: white;
+    margin: 0 20px;
     text-decoration: none;
-    margin: 0 15px;
-    font-weight: bold;
+    font-weight: 600;
+    text-transform: uppercase;
+    font-size: 0.9rem;
+    transition: color 0.3s;
 }
 
-/* Section de contenu (Version corrigée) */
+nav a:hover {
+    color: #ff6347;
+}
+
 section {
-    padding: 30px;
+    max-width: 800px;
+    margin: 40px auto;
+    padding: 40px;
     background: white;
-    margin: 20px;          /* Créé un petit espace autour de la carte */
-    border-radius: 10px;
-    box-shadow: 0 4px 10px rgba(0,0,0,0.1); /* Petite ombre pour faire propre */
-    
-    /* Supprime tout ce qui pourrait limiter la largeur */
-    display: block; 
+    text-align: center;
+    border-radius: 8px;
+    box-shadow: 0 4px 15px rgba(0,0,0,0.05);
 }
 
-/* Le bouton rouge simple */
+h2 {
+    font-family: 'Playfair Display', serif;
+    color: #a52a2a;
+    font-size: 2rem;
+}
+
+/* LE BOUTON REVISITÉ */
 .btn-reserve {
-    display: inline-block;
-    background-color: #e63946;
+    background: #a52a2a; /* Rouge brique élégant */
     color: white;
-    padding: 10px 20px;
-    text-decoration: none;
-    border-radius: 5px;
+    padding: 18px 40px; /* Plus gros comme demandé */
+    border: none;
+    border-radius: 50px; /* Bords arrondis pour le style */
+    font-size: 1.2rem;
     font-weight: bold;
+    cursor: pointer;
+    text-decoration: none;
+    display: inline-block;
+    transition: transform 0.2s, background 0.3s, box-shadow 0.3s;
+    box-shadow: 0 4px 10px rgba(165, 42, 42, 0.3);
+}
+
+.btn-reserve:hover {
+    background: #800000;
+    transform: scale(1.05); /* Effet de grossissement au survol */
+    box-shadow: 0 6px 20px rgba(165, 42, 42, 0.4);
+}
+
+.services p {
+    font-style: italic;
+    color: #666;
 }
 
 footer {
     text-align: center;
-    padding: 20px;
+    padding: 30px;
     font-size: 0.8rem;
+    color: #888;
 }
