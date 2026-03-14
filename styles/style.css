@@ -10,14 +10,14 @@ body {
 }
 
 header {
-    background: linear-gradient(rgba(0,0,0,0.6), rgba(0,0,0,0.6)), 
-                url('https://images.unsplash.com/photo-1559339352-11d035aa65de?ixlib=rb-1.2.1&auto=format&fit=crop&w=1350&q=80');
+    /* On remet l'image avec un dégradé sombre pour que le texte blanc ressorte bien */
+    background: linear-gradient(rgba(0,0,0,0.6), rgba(0,0,0,0.6)), url('../images/image.png');
     background-size: cover;
     background-position: center;
     color: white;
-    padding: 100px 20px; /* On augmente l'espace pour voir l'image */
+    padding: 100px 20px; /* Plus de padding pour voir davantage l'image */
     text-align: center;
-    border-bottom: 5px solid #a52a2a;
+    border-bottom: 5px solid #a52a2a; 
 }
 header h1 {
     font-family: 'Playfair Display', serif;
