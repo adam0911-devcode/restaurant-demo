@@ -103,3 +103,35 @@ footer {
     font-size: 0.8rem;
     color: #888;
 }
+/* --- ADAPTATION MOBILE --- */
+@media (max-width: 768px) {
+    header {
+        padding: 60px 15px; /* On réduit la hauteur du header sur mobile */
+    }
+
+    header h1 {
+        font-size: 2rem; /* Titre plus petit pour qu'il ne dépasse pas */
+    }
+
+    nav {
+        display: flex;
+        flex-direction: column; /* Les liens s'empilent au lieu d'être côte à côte */
+        gap: 10px;
+    }
+
+    nav a {
+        margin: 5px 0;
+        font-size: 1.1rem;
+    }
+
+    section {
+        margin: 15px; /* Moins de vide sur les côtés */
+        padding: 20px;
+        width: auto; /* Force la section à prendre la largeur disponible */
+    }
+
+    .btn-reserve {
+        width: 100%; /* Le bouton prend toute la largeur pour être facile à cliquer avec le pouce */
+        box-sizing: border-box;
+    }
+}
