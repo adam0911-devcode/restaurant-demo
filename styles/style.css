@@ -1,136 +1,58 @@
-/* Importation d'une police plus élégante */
-@import url('https://fonts.googleapis.com/css2?family=Playfair+Display:wght@700&family=Poppins:wght@300;400;600&display=swap');
-
+/* Style général */
 body {
-    font-family: 'Poppins', sans-serif;
-    margin: 0;
-    background: #fdfaf6; /* Un blanc cassé plus chaleureux */
-    color: #333;
+    font-family: Arial, sans-serif;
     line-height: 1.6;
-}
-
-header {
-    /* C'est ici que la magie opère : */
-    background: linear-gradient(rgba(0,0,0,0.5), rgba(0,0,0,0.7)), /* Voile sombre pour la lisibilité */
-                url('../images/image.png'); /* Ton image */
-    
-    /* Ces propriétés sont essentielles pour le rendu : */
-    background-size: cover;      /* L'image couvre tout l'espace */
-    background-position: center; /* L'image est centrée */
-    background-repeat: no-repeat; /* L'image ne se répète pas */
-
-    /* On garde tes autres styles mais on augmente le padding pour voir l'image */
-    color: white;
-    padding: 100px 20px; /* J'ai grossi le padding pour plus de hauteur */
-    text-align: center;
-    border-bottom: 5px solid #a52a2a;
-}
-
-header h1 {
-    font-family: 'Playfair Display', serif;
-    font-size: 3rem;
     margin: 0;
+    padding: 0;
+    background-color: #f4f4f4;
 }
 
-nav {
-    background: #3d3d3d;
-    padding: 15px;
+/* Header avec ton image de fond */
+header {
+    background: linear-gradient(rgba(0,0,0,0.5), rgba(0,0,0,0.5)), url('../images/image.png');
+    background-size: cover;
+    background-position: center;
+    color: white;
     text-align: center;
-    position: sticky;
-    top: 0;
-    z-index: 1000;
+    padding: 60px 20px;
+}
+
+/* Navigation simple */
+nav {
+    background: #333;
+    color: white;
+    text-align: center;
+    padding: 10px;
 }
 
 nav a {
     color: white;
-    margin: 0 20px;
     text-decoration: none;
-    font-weight: 600;
-    text-transform: uppercase;
-    font-size: 0.9rem;
-    transition: color 0.3s;
-}
-
-nav a:hover {
-    color: #ff6347;
-}
-
-section {
-    max-width: 800px;
-    margin: 40px auto;
-    padding: 40px;
-    background: white;
-    text-align: center;
-    border-radius: 8px;
-    box-shadow: 0 4px 15px rgba(0,0,0,0.05);
-}
-
-h2 {
-    font-family: 'Playfair Display', serif;
-    color: #a52a2a;
-    font-size: 2rem;
-}
-
-/* LE BOUTON AJUSTÉ */
-.btn-reserve {
-    background: #a52a2a; 
-    color: white;
-    padding: 14px 30px; /* Taille légèrement réduite */
-    border: none;
-    border-radius: 50px; 
-    font-size: 1.1rem; /* Un peu plus petit */
+    margin: 0 15px;
     font-weight: bold;
-    cursor: pointer;
-    text-decoration: none;
-    display: inline-block;
-    transition: transform 0.2s, background 0.3s, box-shadow 0.3s;
-    box-shadow: 0 4px 10px rgba(165, 42, 42, 0.3);
 }
 
-.btn-reserve:hover {
-    background: #800000;
-    transform: scale(1.03); /* Effet plus subtil */
-    box-shadow: 0 6px 15px rgba(165, 42, 42, 0.4);
+/* Section de contenu */
+section {
+    padding: 20px;
+    background: white;
+    margin: 10px;
+    border-radius: 5px;
 }
-.services p {
-    font-style: italic;
-    color: #666;
+
+/* Le bouton rouge simple */
+.btn-reserve {
+    display: inline-block;
+    background-color: #e63946;
+    color: white;
+    padding: 10px 20px;
+    text-decoration: none;
+    border-radius: 5px;
+    font-weight: bold;
 }
 
 footer {
     text-align: center;
-    padding: 30px;
+    padding: 20px;
     font-size: 0.8rem;
-    color: #888;
 }
-/* --- ADAPTATION MOBILE --- */
-@media (max-width: 768px) {
-    header {
-        padding: 60px 15px; /* On réduit la hauteur du header sur mobile */
-    }
-
-    header h1 {
-        font-size: 2rem; /* Titre plus petit pour qu'il ne dépasse pas */
-    }
-
-    nav {
-        display: flex;
-        flex-direction: column; /* Les liens s'empilent au lieu d'être côte à côte */
-        gap: 10px;
-    }
-
-    nav a {
-        margin: 5px 0;
-        font-size: 1.1rem;
-    }
-
-    section {
-        margin: 15px; /* Moins de vide sur les côtés */
-        padding: 20px;
-        width: auto; /* Force la section à prendre la largeur disponible */
-    }
-
-    .btn-reserve {
-        width: 100%; /* Le bouton prend toute la largeur pour être facile à cliquer avec le pouce */
-        box-sizing: border-box;
-    }
