@@ -10,13 +10,15 @@ body {
 }
 
 header {
-    background: #2c2c2c;
+    background: linear-gradient(rgba(0,0,0,0.6), rgba(0,0,0,0.6)), 
+                url('https://images.unsplash.com/photo-1559339352-11d035aa65de?ixlib=rb-1.2.1&auto=format&fit=crop&w=1350&q=80');
+    background-size: cover;
+    background-position: center;
     color: white;
-    padding: 60px 20px;
+    padding: 100px 20px; /* On augmente l'espace pour voir l'image */
     text-align: center;
-    border-bottom: 5px solid #a52a2a; /* Ligne rouge brique */
+    border-bottom: 5px solid #a52a2a;
 }
-
 header h1 {
     font-family: 'Playfair Display', serif;
     font-size: 3rem;
